@@ -1,0 +1,33 @@
+{
+  "type": "tconstruct:alloy",
+  "conditions": [
+    {
+      "value": {
+        "tag": "forge:ingots/brass",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    },
+    {
+      "value": {
+        "tag": "forge:ingots/zinc",
+        "type": "forge:tag_empty"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "inputs": [
+    {
+      "tag": "forge:molten_brass",
+      "amount": 810
+    },{
+      "tag": "minecraft:lava",
+      "amount": 810
+    }
+  ],
+  "result": {
+    "fluid": "tconstruct:blazing_blood",
+    "amount": 100
+  },
+  "temperature": 1500
+}

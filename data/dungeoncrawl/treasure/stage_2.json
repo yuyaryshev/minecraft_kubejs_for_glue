@@ -1,0 +1,82 @@
+[
+  {
+    "item": "minecraft:chainmail_boots",
+    "weight": 3
+  },
+  {
+    "item": "minecraft:chainmail_leggings",
+    "weight": 3
+  },
+  {
+    "item": "minecraft:chainmail_chestplate",
+    "weight": 3
+  },
+  {
+    "item": "minecraft:chainmail_helmet",
+    "weight": 3
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 3
+  },
+  {
+    "item": "create:andesite_alloy",
+    "weight": 3
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 3
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 3
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 2
+  },
+  {
+    "item": "create:andesite_alloy",
+    "weight": 2
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 2
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 2
+  },
+  {
+    "item": "minecraft:stone_sword",
+    "weight": 2
+  },
+  {
+    "item": "minecraft:stone_pickaxe",
+    "weight": 2
+  },
+  {
+    "item": "minecraft:stone_axe",
+    "weight": 4
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 4
+  },
+  {
+    "item": "create:zinc_ore",
+    "weight": 3
+  },
+  {
+    "item": "create:zinc_ore",
+    "weight": 4
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 1
+  },
+  {
+    "item": "minecraft:pointed_dripstone",
+    "weight": 1
+  }
+]

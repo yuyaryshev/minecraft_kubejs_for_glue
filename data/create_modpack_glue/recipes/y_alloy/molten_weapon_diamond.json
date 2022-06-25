@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:true"
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:alloy",
+        "inputs": [
+          {
+            "tag": "tconstruct:molten_iron",
+            "amount": 720
+          },
+          {
+            "tag": "tconstruct:molten_diamond",
+            "amount": 720
+          },
+          {
+            "tag": "tconstruct:molten_gold",
+            "amount": 720
+          }
+        ],
+        "result": {
+          "fluid": "create_modpack_glue:weapon_molted_diamond",
+          "amount": 90
+        },
+        "temperature": 1450
+      }
+    }
+  ]
+}

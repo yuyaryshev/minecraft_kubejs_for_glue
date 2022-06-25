@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BHB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "H": {
+      "item": "minecraft:player_head"
+    }
+  },
+  "result": {
+    "item": "minecraft:skeleton_skull"
+  }
+}
