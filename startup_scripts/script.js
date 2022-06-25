@@ -19,12 +19,13 @@ onEvent('item.modification', event => {
 	const stackSizes = {
 		'minecraft:raw_iron':1,
 		'minecraft:raw_gold':1,
-		'minecraft:raw_zinc':1,
-		'minecraft:raw_copper':1		
+		'create:raw_zinc':1,
+		'minecraft:raw_copper':1,
+		'forbidden:copper_ore':1,
+		'occultism:silver_ore':1,
 		// mekanism:osmium_ore
 		// mekanism:tin_ore
 		// mekanism:lead_ore
-		// occultism:silver_ore
 	};
 	
 	for(const k in stackSizes) {
