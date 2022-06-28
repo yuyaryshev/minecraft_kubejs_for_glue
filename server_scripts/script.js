@@ -311,27 +311,16 @@ onEvent("recipes", (event) => {
     event.replaceInput({ id: "storagedrawers:gold_storage_upgrade" }, "minecraft:gold_ingot", "minecraft:iron_ingot");
     event.replaceInput({ id: "storagedrawers:diamond_storage_upgrade" }, "minecraft:diamond", "minecraft:gold_ingot");
     event.replaceInput({ id: "storagedrawers:emerald_storage_upgrade" }, "minecraft:emerald", "create:brass_ingot");
-
     event.replaceInput({ mod: "storagedrawers", id: /controller/ }, "minecraft:comparator", "minecraft:copper_ingot");
-
     event.replaceInput({ mod: "storagedrawers", id: /controller/ }, "minecraft:diamond", "minecraft:copper_ingot");
-
     event.replaceInput({ mod: "storagedrawers", id: /controller/ }, "minecraft:diamond", "minecraft:copper_ingot");
-
     event.replaceInput({ mod: "storagedrawers", id: /controller/ }, "minecraft:gold_ingot", "minecraft:copper_ingot");
-
     event.replaceInput({ mod: "storagedrawers", id: /compacting/ }, "minecraft:piston", "minecraft:cobblestone");
-
     event.replaceInput({ mod: "storagedrawers", id: /compacting/ }, "minecraft:stone", "minecraft:cobblestone");
-
     event.replaceInput({ mod: "storagedrawers", id: /compacting/ }, "minecraft:iron_ingot", "minecraft:cobblestone");
-
     event.replaceInput({ id: "storagedrawers:drawer_key" }, "minecraft:gold_ingot", "minecraft:copper_ingot");
-
     event.replaceInput({ id: "storagedrawers:drawer_key" }, "minecraft:gold_nugget", "create:copper_nugget");
-
     event.replaceInput({ id: "storagedrawers:quantify_key" }, "minecraft:writable_book", "minecraft:book");
-
     event.replaceInput({ id: "storagedrawers:concealment_key" }, "minecraft:ender_eye", "create:copper_nugget");
     /*
 storagedrawers:obsidian_storage_upgrade - minecraft:obsidian -> minecraft:copper_ingot
@@ -408,6 +397,7 @@ minecraft:piston -> iron_ingot
         },
         {
             n: "redstone",
+            inpureDust: "create_modpack_glue:inpure_redstone_dust",
             washingResults: [
                 { n: "minecraft:redstone", p: 0.1 },
                 { n: "minecraft:gunpowder", p: 0.01 },
@@ -415,6 +405,7 @@ minecraft:piston -> iron_ingot
         },
         {
             n: "diamond",
+            inpureDust: "create_modpack_glue:inpure_diamond_dust",
             washingResults: [
                 { n: "create_modpack_glue:diamond_dust", p: 0.03, fluid: "tconstruct:molten_diamond", fluidAmount: 3 },
                 { n: "minecraft:gunpowder", p: 0.1 },
@@ -422,32 +413,56 @@ minecraft:piston -> iron_ingot
         },
         {
             n: "emerald",
+            inpureDust: "create_modpack_glue:inpure_emerald_dust",
             washingResults: [
                 { n: "create_modpack_glue:emerald_dust", p: 0.01, fluid: "tconstruct:molten_emerald", fluidAmount: 3 },
                 { n: "minecraft:gunpowder", p: 0.1 },
             ],
         },
     ]) {
-        event.recipes.create.milling({
-            type: "create:milling",
-            ingredients: [
-                {
-                    item: `create_modpack_glue:raw_poor_${m.n}_ore`,
-                },
-            ],
-            results: [
-                {
-                    item: `create_modpack_glue:${m.n}_grain`,
-                },
-            ],
-            processingTime: 50,
-        });
+        if (!m.inpureDust) {
+            event.recipes.create.milling({
+                type: "create:milling",
+                ingredients: [
+                    {
+                        item: `create_modpack_glue:raw_poor_${m.n}_ore`,
+                    },
+                ],
+                results: [
+                    {
+                        item: `create_modpack_glue:${m.n}_grain`,
+                    },
+                ],
+                processingTime: 300,
+            });
 
-        event.recipes.create.crushing({
-            ingredients: [{ item: `create_modpack_glue:raw_poor_${m.n}_ore` }],
-            results: [{ item: `create_modpack_glue:${m.n}_grain` }, { item: `create_modpack_glue:${m.n}_grain`, chance: 0.2 }],
-            processingTime: 100,
-        });
+            event.recipes.create.crushing({
+                ingredients: [{ item: `create_modpack_glue:raw_poor_${m.n}_ore` }],
+                results: [{ item: `create_modpack_glue:${m.n}_grain` }, { item: `create_modpack_glue:${m.n}_grain`, chance: 0.2 }],
+                processingTime: 30,
+            });
+        } else {
+            event.recipes.create.milling({
+                type: "create:milling",
+                ingredients: [
+                    {
+                        item: `create_modpack_glue:raw_poor_${m.n}_ore`,
+                    },
+                ],
+                results: [
+                    {
+                        item: m.inpureDust,
+                    },
+                ],
+                processingTime: 300,
+            });
+
+            event.recipes.create.crushing({
+                ingredients: [{ item: `create_modpack_glue:raw_poor_${m.n}_ore` }],
+                results: [{ item: m.inpureDust }, { item: m.inpureDust, chance: 0.2 }],
+                processingTime: 30,
+            });
+        }
 
         if (m.nugget) {
             event.shaped(m.nugget, ["GGG", "GGG", "GGG"], {

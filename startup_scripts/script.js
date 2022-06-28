@@ -17,12 +17,12 @@ onEvent('block.registry', event => {
 onEvent('item.modification', event => {
 	
 	const stackSizes = {
-		'minecraft:raw_iron':1,
-		'minecraft:raw_gold':1,
-		'create:raw_zinc':1,
-		'minecraft:raw_copper':1,
-		'forbidden:copper_ore':1,
-		'occultism:silver_ore':1,
+		'minecraft:raw_iron':2,
+		'minecraft:raw_gold':2,
+		'create:raw_zinc':2,
+		'minecraft:raw_copper':2,
+		'occultism:raw_silver':2,
+		'tconstruct:raw_cobalt':2,
 		// mekanism:osmium_ore
 		// mekanism:tin_ore
 		// mekanism:lead_ore
