@@ -34,8 +34,8 @@ let materialsToReplace = {
     diamond: "create_modpack_glue:diamond_weapon_ingot",
     iron_ingot: "create_modpack_glue:iron_weapon_ingot",
     iron_nugget: "minecraft:iron_ingot",
-//    "magistuarmory:steel_ingot": "create_modpack_glue:steel_weapon_ingot",
-//    "magistuarmory:steel_nugget": "minecraft:iron_ingot",
+    //    "magistuarmory:steel_ingot": "create_modpack_glue:steel_weapon_ingot",
+    //    "magistuarmory:steel_nugget": "minecraft:iron_ingot",
     "create:brass_ingot": "create:brass_block",
 };
 
@@ -60,10 +60,10 @@ let crushingRecipes = {
 };
 
 onEvent("recipes", (event) => {
-    event.remove({id: 'magistuarmory:steel_nuggets_to_steel_ingot'});
-    event.remove({id: 'magistuarmory:furnace/steel_ingot_blasting'});
-    event.remove({id: 'magistuarmory:steel_ingot_blasting'});
-    event.remove({id: 'mekanism:processing/steel/ingot/from_dust_blasting'});
+    event.remove({ id: "magistuarmory:steel_nuggets_to_steel_ingot" });
+    event.remove({ id: "magistuarmory:furnace/steel_ingot_blasting" });
+    event.remove({ id: "magistuarmory:steel_ingot_blasting" });
+    event.remove({ id: "mekanism:processing/steel/ingot/from_dust_blasting" });
     // event.remove({id: 'magistuarmory:steel_ingot'})
     // {input: '#forge:dusts/redstone',output: '#minecraft:wool'}
 
@@ -439,6 +439,29 @@ minecraft:piston -> iron_ingot
                 results: [{ item: `create_modpack_glue:${m.n}_grain` }, { item: `create_modpack_glue:${m.n}_grain`, chance: 0.2 }],
                 processingTime: 30,
             });
+
+            if (m.nugget) {
+                event.recipes.create.milling({
+                    type: "create:milling",
+                    ingredients: [
+                        {
+                            item: `create_modpack_glue:raw_${m.n}_nugget`,
+                        },
+                    ],
+                    results: [
+                        {
+                            item: m.nugget,
+                        },
+                    ],
+                    processingTime: 1000,
+                });
+
+                event.recipes.create.crushing({
+                    ingredients: [{ item: `create_modpack_glue:raw_${m.n}_nugget` }],
+                    results: [{ item: m.nugget }, { item: m.nugget, chance: 0.2 }],
+                    processingTime: 100,
+                });
+            }
         } else {
             event.recipes.create.milling({
                 type: "create:milling",
