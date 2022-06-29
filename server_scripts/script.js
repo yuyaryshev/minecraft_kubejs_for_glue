@@ -322,6 +322,7 @@ onEvent("recipes", (event) => {
     event.replaceInput({ id: "storagedrawers:drawer_key" }, "minecraft:gold_nugget", "create:copper_nugget");
     event.replaceInput({ id: "storagedrawers:quantify_key" }, "minecraft:writable_book", "minecraft:book");
     event.replaceInput({ id: "storagedrawers:concealment_key" }, "minecraft:ender_eye", "create:copper_nugget");
+    event.replaceInput({ id: "reliquary:handgun" }, "minecraft:iron_ingot", "minecraft:netherite_block");
     /*
 storagedrawers:obsidian_storage_upgrade - minecraft:obsidian -> minecraft:copper_ingot
 storagedrawers:iron_storage_upgrade - minecraft:iron_ingot -> create:andesite_alloy
