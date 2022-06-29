@@ -34,8 +34,8 @@ let materialsToReplace = {
     diamond: "create_modpack_glue:diamond_weapon_ingot",
     iron_ingot: "create_modpack_glue:iron_weapon_ingot",
     iron_nugget: "minecraft:iron_ingot",
-    "magistuarmory:steel_ingot": "create_modpack_glue:steel_weapon_ingot",
-    "magistuarmory:steel_nugget": "minecraft:iron_ingot",
+//    "magistuarmory:steel_ingot": "create_modpack_glue:steel_weapon_ingot",
+//    "magistuarmory:steel_nugget": "minecraft:iron_ingot",
     "create:brass_ingot": "create:brass_block",
 };
 
@@ -60,6 +60,10 @@ let crushingRecipes = {
 };
 
 onEvent("recipes", (event) => {
+    event.remove({id: 'magistuarmory:steel_nuggets_to_steel_ingot'});
+    event.remove({id: 'magistuarmory:furnace/steel_ingot_blasting'});
+    event.remove({id: 'magistuarmory:steel_ingot_blasting'});
+    event.remove({id: 'mekanism:processing/steel/ingot/from_dust_blasting'});
     // event.remove({id: 'magistuarmory:steel_ingot'})
     // {input: '#forge:dusts/redstone',output: '#minecraft:wool'}
 
@@ -101,17 +105,10 @@ onEvent("recipes", (event) => {
     event.recipes.create.mixing({
         ingredients: [{ item: "mekanism:dust_quartz" }, { item: "mekanism:dust_charcoal" }],
         results: [{ item: "create_modpack_glue:cleaning_composite", count: 1 }],
-        processingTime: 100,
+        processingTime: 200,
     });
 
     if (!useTinkerMoltenOnlyFromSteelUp) {
-        event.recipes.create.mixing({
-            ingredients: [{ item: "create_modpack_glue:iron_weapon_ingot" }, { item: "create_modpack_glue:cleaning_composite" }],
-            results: [{ item: "create_modpack_glue:steel_weapon_ingot", count: 1 }],
-            processingTime: 100,
-            heatRequirement: "heated", // "superheated"
-        });
-
         // For diamond tools & weapons
         event.recipes.create.mixing({
             ingredients: [{ item: "mekanism:dust_iron" }, { item: "mekanism:dust_diamond" }, { item: "mekanism:dust_gold" }],

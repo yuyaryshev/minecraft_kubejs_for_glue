@@ -1,0 +1,28 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "PPB",
+    "PCI",
+    "PPB"
+  ],
+  "key": {
+    "P": {
+      "tag": "forge:plates/copper"
+    },
+    "B": {
+      "tag": "forge:ingots/copper"
+    },
+    "I": [
+      {
+        "item": "create:andesite_casing"
+      }
+    ],
+    "C": {
+      "item": "create:andesite_casing"
+    }
+  },
+  "result": {
+    "item": "create:furnace_engine"
+  },
+  "acceptMirrored": true
+}
