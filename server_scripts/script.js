@@ -337,28 +337,44 @@ storagedrawers:compacting_drawers
 minecraft:piston -> iron_ingot
 */
 
+        // T minecraft:red_dye | minecraft:redstone
+        // L minecraft:green_dye | minecraft:lime_dye | minecraft:copper_nugget | tconstruct:greenheart_log | minecraft:emerald
+        // M minecraft:smooth_stone
+        // R tconstruct:cobalt_nugget | minecraft:lapis_lazuli | minecraft:blue_dye
+        // B minecraft:gold_nugget | minecraft:yellow_dye
+        // redstonepen:control_box
+
+    event.shaped("redstonepen:control_box", [" T ","LMR"," B "], {
+        T:[{item:'minecraft:red_dye'},{item:'minecraft:redstone'}],
+        L:[{item:'tconstruct:copper_nugget'},{item:'minecraft:lime_dye'},{item:'minecraft:green_dye'},{item:'tconstruct:greenheart_log'},{item:'minecraft:emerald'}],
+        M:'minecraft:smooth_stone',
+        R:[{item:'minecraft:blue_dye'},{item:'minecraft:lapis_lazuli'},{item:'tconstruct:cobalt_nugget'}],
+        B:[{item:'minecraft:yellow_dye'},{item:'minecraft:gold_nugget'}]
+    });
+
     // Cheaper starting recipes
     event.remove({ id: "minecraft:hopper" });
-    multiShaped(
-        "minecraft:hopper",
-        ["A A", "A A", " A "],
-        [{ A: "create:andesite_alloy" }, { A: "minecraft:iron_ingot" }, { A: "create:zinc_ingot" }],
-    );
+    event.shaped("minecraft:hopper", ["A A", "A A", " A "], {
+        A:[{ item: "create:andesite_alloy" }, { item: "minecraft:iron_ingot" }, { item: "create:zinc_ingot" }]
+    });
 
     // Cheaper starting items
-    multiShaped(
-        "minecraft:shears",
-        ["A ", " A"],
-        [{ A: "create:andesite_alloy" }, { A: "minecraft:iron_ingot" }, { A: "create:zinc_ingot" }, { A: "minecraft:copper_ingot" }],
-    );
+    event.remove({ id: "minecraft:shears" });
+    event.shaped("minecraft:shears", ["A ", " A"], {
+        A:[{ item: "create:andesite_alloy" }, { item: "minecraft:iron_ingot" }, { item: "create:zinc_ingot" }, { item: "minecraft:copper_ingot" }, { item: "minecraft:iron_ingot" }]
+    });
 
-    multiShaped("minecraft:bucket", ["   ", "A A", " A "], [{ A: "create:zinc_ingot" }, { A: "create:andesite_alloy" }]);
+    event.remove({ id: "minecraft:bucket" });
+    event.shaped("minecraft:bucket", ["   ", "A A", " B "], {
+        A:[{ item: "create:andesite_alloy" }, { item: "create:zinc_ingot" }, { item: "minecraft:iron_ingot" }, { item: "minecraft:copper_ingot" }],
+        B:[{ item: "create:andesite_alloy" }, { item: "create:zinc_ingot" }, { item: "minecraft:iron_ingot" }, ],
 
-    multiShaped(
-        "minecraft:cauldron",
-        ["A A", "A A", "AAA"],
-        [{ A: "minecraft:copper_ingot" }, { A: "create:zinc_ingot" }, { A: "create:andesite_alloy" }],
-    );
+    });
+
+    event.remove({ id: "minecraft:cauldron" });
+    event.shaped("minecraft:cauldron", ["A A", "A A", "AAA"], {
+        A:[{ item: "minecraft:copper_ingot" }, { item: "create:zinc_ingot" }, { item: "create:andesite_alloy" }, { item: "minecraft:iron_ingot" },]
+    });
 
     event.blasting("minecraft:coal", "minecraft:charcoal");
 
@@ -434,6 +450,10 @@ minecraft:piston -> iron_ingot
                 processingTime: 300,
             });
 
+            event.shaped(`create_modpack_glue:${m.n}_grain`, ["A  ", " A ", "  A"], {
+                A:[{ item: `create_modpack_glue:raw_poor_${m.n}_ore` },]
+            });
+
             event.recipes.create.crushing({
                 ingredients: [{ item: `create_modpack_glue:raw_poor_${m.n}_ore` }],
                 results: [{ item: `create_modpack_glue:${m.n}_grain` }, { item: `create_modpack_glue:${m.n}_grain`, chance: 0.2 }],
@@ -441,6 +461,10 @@ minecraft:piston -> iron_ingot
             });
 
             if (m.nugget) {
+                event.shaped(m.nugget, ["A  ", " A ", "  A"], {
+                    A:[{ item: `create_modpack_glue:raw_${m.n}_nugget`,}]
+                });
+
                 event.recipes.create.milling({
                     type: "create:milling",
                     ingredients: [
@@ -454,6 +478,12 @@ minecraft:piston -> iron_ingot
                         },
                     ],
                     processingTime: 1000,
+                });
+
+                // event.smelting(m.nugget, `create_modpack_glue:raw_${m.n}_nugget`);
+                // event.recipes.minecraft.blasting(m.nugget, `create_modpack_glue:raw_${m.n}_nugget`);
+                event.shaped("minecraft:hopper", ["A A", "A A", " A "], {
+                    A:[{ item: "create:andesite_alloy" }, { item: "minecraft:iron_ingot" }, { item: "create:zinc_ingot" }]
                 });
 
                 event.recipes.create.crushing({

@@ -45,14 +45,14 @@
 		  "name": "create_modpack_glue:raw_gold_nugget"
 		},{
 			  "type": "minecraft:item",
-			  "weight":300,
+			  "weight":100,
 			  "functions": [
 				{
 				  "function": "minecraft:set_count",
 				  "count": {
 					"type": "minecraft:uniform",
 					"min": 0.0,
-					"max": 54.0
+					"max": 2.0
 				  },
 				  "add": false
 				}
@@ -61,7 +61,7 @@
 			}
 		]
     },{
-      "rolls": 1.0,
+      "rolls": 20.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
@@ -72,7 +72,7 @@
 			  "count": {
 				"type": "minecraft:uniform",
 				"min": 0.0,
-				"max": 54.0
+				"max": 2.0
 			  },
 			  "add": false
 			}
