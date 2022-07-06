@@ -1,0 +1,62 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:andesite_alloy"
+  },
+  "transitionalItem": {
+    "item": "create:incomplete_cogwheel"
+  },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create:incomplete_cogwheel"
+        },
+        {
+          "item": "create:iron_sheet"
+        }
+      ],
+      "results": [
+        {
+          "item": "create:incomplete_cogwheel"
+        }
+      ]
+    },{
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "create:incomplete_cogwheel"
+        }
+      ],
+      "results": [
+        {
+          "item": "create:incomplete_cogwheel"
+        }
+      ]
+    },{
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create:incomplete_cogwheel"
+        },
+        {
+          "item": "create:andesite_alloy"
+        }
+      ],
+      "results": [
+        {
+          "item": "create:incomplete_cogwheel"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "create:chute",
+      "count": 8,
+      "chance": 32.0
+    }
+  ],
+  "loops": 3
+}
