@@ -302,6 +302,10 @@ onEvent("recipes", (event) => {
         }
     }
 
+    // Cheaper wood automation
+    event.replaceInput({ id: "create:brass_hand" }, "create:brass_sheet", "create:copper_sheet");
+    event.replaceInput({ id: "create:brass_hand" }, "create:electron_tube", "create:cogwheel");
+	
     // Cheaper drawers
     event.replaceInput({ id: "storagedrawers:obsidian_storage_upgrade" }, "minecraft:obsidian", "minecraft:copper_ingot");
     event.replaceInput({ id: "storagedrawers:iron_storage_upgrade" }, "minecraft:iron_ingot", "create:andesite_alloy");
@@ -577,6 +581,14 @@ minecraft:piston -> iron_ingot
             }
         }
     }
+
+    // For iron tools & weapons
+    event.recipes.create.pressing({
+        ingredients: [{ item: "minecraft:kelp_block" }],
+        results: [{ item: "create:belt", count: 2 }],
+        processingTime: 300,
+    });
+
 
     //  event.recipes.create.crushing([item.of('mekanism:dust_quartz').chance(0.5)], 'minecraft:quartz', 100);
 
