@@ -7,6 +7,22 @@
     "item": "create_modpack_glue:incomplete_mechanical_complect"
   },
   "sequence": [
+    	{
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_modpack_glue:incomplete_mechanical_complect"
+        },
+        {
+          "item": "minecraft:bedrock"
+        }
+      ],
+      "results": [
+        {
+          "item": "create_modpack_glue:incomplete_mechanical_complect"
+        }
+      ]
+    },
     {
       "type": "create:deploying",
       "ingredients": [
