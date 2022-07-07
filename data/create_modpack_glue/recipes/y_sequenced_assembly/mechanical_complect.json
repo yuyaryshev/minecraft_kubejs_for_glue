@@ -1,0 +1,79 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:andesite_casing"
+  },
+  "transitionalItem": {
+    "item": "create_modpack_glue:incomplete_mechanical_complect"
+  },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_modpack_glue:incomplete_mechanical_complect"
+        },
+        {
+          "item": "minecraft:iron_ingot"
+        }
+      ],
+      "results": [
+        {
+          "item": "create_modpack_glue:incomplete_mechanical_complect"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "create_modpack_glue:incomplete_mechanical_complect"
+        }
+      ],
+      "results": [
+        {
+          "item": "create_modpack_glue:incomplete_mechanical_complect"
+        }
+      ],
+      "processingTime": 50
+    },  
+	{
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_modpack_glue:incomplete_mechanical_complect"
+        },
+        {
+          "item": "create_modpack_glue:andesite_sheet"
+        }
+      ],
+      "results": [
+        {
+          "item": "create_modpack_glue:incomplete_mechanical_complect"
+        }
+      ]
+    },
+	{
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "create_modpack_glue:incomplete_mechanical_complect"
+        }
+      ],
+      "results": [
+        {
+          "item": "create_modpack_glue:incomplete_mechanical_complect"
+        }
+      ],
+      "processingTime": 50
+    }
+  ],
+  "results": [
+    {
+      "item": "create_modpack_glue:mechanical_complect",
+      "count": 1,
+      "chance": 32.0
+    }
+  ],
+  "loops": 4
+}
