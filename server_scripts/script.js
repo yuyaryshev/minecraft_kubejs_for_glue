@@ -31,9 +31,9 @@ let gearToReplace = [
 ];
 
 let materialsToReplace = {
-    diamond: "create_modpack_glue:diamond_weapon_ingot",
-    iron_ingot: "create_modpack_glue:iron_weapon_ingot",
-    iron_nugget: "minecraft:iron_ingot",
+    "minecraft:diamond": "create_modpack_glue:diamond_weapon_ingot",
+    "minecraft:iron_ingot": "create_modpack_glue:iron_weapon_ingot",
+    "minecraft:iron_nugget": "minecraft:iron_ingot",
     //    "magistuarmory:steel_ingot": "create_modpack_glue:steel_weapon_ingot",
     //    "magistuarmory:steel_nugget": "minecraft:iron_ingot",
     "create:brass_ingot": "create:brass_block",
@@ -229,9 +229,8 @@ onEvent("recipes", (event) => {
     event.replaceInput({ id: "mob_grinding_utils:recipe_saw" }, "minecraft:iron_block", "minecraft:netherite_block");
 
     // Later enchanting and harder infuser
-    event.replaceInput({ id: "enchantinginfuser:enchanting_infuser" }, "minecraft:crying_obsidian", "minecraft:netherite_block");
-
-    event.replaceInput({ id: "enchantinginfuser:enchanting_infuser" }, "minecraft:ametyst_shard", "minecraft:wither_skeleton_skull");
+    // event.replaceInput({ id: "enchantinginfuser:enchanting_infuser" }, "minecraft:crying_obsidian", "minecraft:netherite_block");
+    // event.replaceInput({ id: "enchantinginfuser:enchanting_infuser" }, "minecraft:ametyst_shard", "minecraft:wither_skeleton_skull");
 
     // Cogwheel packs for trading
     event.shaped("create_modpack_glue:small_cogwheel_pack", ["SB", "BS"], {
@@ -305,8 +304,8 @@ onEvent("recipes", (event) => {
     }
 
     // Cheaper wood automation
-    event.replaceInput({ id: "create:brass_hand" }, "create:brass_sheet", "create:copper_sheet");
-    event.replaceInput({ id: "create:brass_hand" }, "create:electron_tube", "create:cogwheel");
+    event.replaceInput({ id: "create:crafting/kinetics/brass_hand" }, "create:brass_sheet", "create:copper_sheet");
+    event.replaceInput({ id: "create:crafting/kinetics/brass_hand" }, "create:electron_tube", "create:cogwheel");
 
     // Cheaper drawers
     event.replaceInput({ id: "storagedrawers:obsidian_storage_upgrade" }, "minecraft:obsidian", "minecraft:copper_ingot");
@@ -597,18 +596,18 @@ minecraft:piston -> iron_ingot
 
     // For iron tools & weapons
     event.recipes.create.pressing({
-        ingredients: [{ item: "minecraft:kelp_block" }],
-        results: [{ item: "create:belt", count: 2 }],
+        ingredients: [{ item: "minecraft:dried_kelp_block" }],
+        results: [{ item: "create:belt_connector", count: 2 }],
         processingTime: 300,
     });
 
     event.custom({
         type: "createaddition:rolling",
         input: {
-            item: "minecraft:dryed_kelp_block",
+            item: "minecraft:dried_kelp_block",
         },
         result: {
-            item: "create:belt",
+            item: "create:belt_connector",
             count: 2,
         },
     });
@@ -619,21 +618,23 @@ minecraft:piston -> iron_ingot
         processingTime: 100,
     });
 
-    woodTypes.map(woodType=>event.custom({
-        type: "create:cutting",
-        ingredients: [
-            {
-                item: `minecraft:${woodType}_planks`,
-            },
-        ],
-        results: [
-            {
-                item: `minecraft:${woodType}_button`,
-                count: 2,
-            },
-        ],
-        processingTime: 100,
-    }));
+    woodTypes.map((woodType) =>
+        event.custom({
+            type: "create:cutting",
+            ingredients: [
+                {
+                    item: `minecraft:${woodType}_planks`,
+                },
+            ],
+            results: [
+                {
+                    item: `minecraft:${woodType}_button`,
+                    count: 2,
+                },
+            ],
+            processingTime: 100,
+        }),
+    );
 
     //  event.recipes.create.crushing([item.of('mekanism:dust_quartz').chance(0.5)], 'minecraft:quartz', 100);
 
