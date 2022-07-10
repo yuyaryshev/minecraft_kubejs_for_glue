@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "create_modpack_glue:adv_cleaning_composite"
+  },
+  "result": {
+    "fluid": "create_modpack_glue:adv_molten_cleaner",
+    "amount": 90
+  },
+  "temperature": 650,
+  "time": 79
+}

@@ -1,0 +1,238 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 3.0,
+        "max": 8.0,
+        "type": "minecraft:uniform"
+      },
+      "entries": [
+        {
+          "name": "create:andesite_alloy",
+          "type": "minecraft:item",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4.0,
+                "max": 12.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
+        },
+        {
+          "name": "minecraft:netherite_scrap",
+          "type": "minecraft:item",
+          "weight": 1
+        },
+        {
+          "name": "minecraft:netherite_scrap",
+          "type": "minecraft:item",
+          "weight": 1
+        },
+        {
+          "name": "create:brass_ingot",
+          "type": "minecraft:item",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
+        },
+        {
+          "name": "create:zinc_ore",
+          "type": "minecraft:item",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 5.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
+        },
+        {
+          "name": "minecraft:pointed_dripstone",
+          "type": "minecraft:item",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
+        },
+        {
+          "name": "minecraft:cooked_porkchop",
+          "type": "minecraft:item",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
+        },
+        {
+          "name": "minecraft:porkchop",
+          "type": "minecraft:item",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
+        },
+        {
+          "name": "create:zinc_block",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "create:zinc_ore",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "create:zinc_block",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "create:zinc_block",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "create:andesite_alloy",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "create:zinc_block",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "create:zinc_block",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "minecraft:pointed_dripstone",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "create:zinc_block",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "create:zinc_block",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "create:andesite_alloy",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "create:zinc_block",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "minecraft:obsidian",
+          "type": "minecraft:item",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3.0,
+                "max": 7.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
+        },
+        {
+          "name": "minecraft:crying_obsidian",
+          "type": "minecraft:item",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3.0,
+                "max": 7.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
+        },
+        {
+          "name": "minecraft:warped_fungus",
+          "type": "minecraft:item",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3.0,
+                "max": 7.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
+        },
+        {
+          "name": "minecraft:saddle",
+          "type": "minecraft:item",
+          "weight": 5
+        },
+        {
+          "name": "minecraft:iron_horse_armor",
+          "type": "minecraft:item",
+          "weight": 2
+        },
+        {
+          "name": "minecraft:golden_horse_armor",
+          "type": "minecraft:item",
+          "weight": 3
+        },
+        {
+          "name": "create:brass_ingot_horse_armor",
+          "type": "minecraft:item"
+        }
+      ]
+    }
+  ]
+}

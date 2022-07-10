@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/ingot"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "create_modpack_glue:weapon_molted_diamond",
+    "amount": 90
+  },
+  "result": "create_modpack_glue:diamond_weapon_ingot",
+  "cooling_time": 240
+}

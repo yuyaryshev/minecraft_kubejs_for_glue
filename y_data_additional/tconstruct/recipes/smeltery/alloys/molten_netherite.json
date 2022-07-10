@@ -1,0 +1,30 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:true"
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:alloy",
+        "inputs": [
+          {
+            "tag": "tconstruct:molten_debris",
+            "amount": 20
+          },
+          {
+            "tag": "create_modpack_glue:adv_molten_cleaner",
+            "amount": 120
+          }
+        ],
+        "result": {
+          "fluid": "tconstruct:molten_netherite",
+          "amount": 20
+        },
+        "temperature": 1250
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [{
+      "conditions": [
+        {
+          "type": "forge:true"
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:alloy",
+        "inputs": [
+          {
+            "tag": "tconstruct:molten_iron",
+            "amount": 720
+          },
+			{
+            "tag": "tconstruct:molten_copper",
+            "amount": 90
+          },
+          {
+            "tag": "create_modpack_glue:molten_cleaner",
+            "amount": 90
+          }
+        ],
+        "result": {
+          "fluid": "create_modpack_glue:weapon_molted_steel",
+          "amount": 90
+        },
+        "temperature": 977
+      }
+    }
+  ]
+}

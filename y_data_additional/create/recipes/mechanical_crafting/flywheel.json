@@ -1,0 +1,20 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    " BBB",
+    "CB B",
+    " BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:copper_block"
+    },
+    "C": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "create:flywheel"
+  },
+  "acceptMirrored": true
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "item": "create:brass_ingot_boots",
+    "weight": 1
+  },
+  {
+    "item": "create:brass_ingot_leggings",
+    "weight": 1
+  },
+  {
+    "item": "create:brass_ingot_chestplate",
+    "weight": 1
+  },
+  {
+    "item": "create:brass_ingot_helmet",
+    "weight": 1
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 2
+  },
+  {
+    "item": "create:andesite_alloy",
+    "weight": 2
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 2
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 2
+  },
+  {
+    "item": "create:zinc_block",
+    "weight": 2
+  },
+  {
+    "item": "create:zinc_ore",
+    "weight": 2
+  },
+  {
+    "item": "create:zinc_ore",
+    "weight": 2
+  },
+  {
+    "item": "create:brass_ingot_pickaxe",
+    "weight": 2
+  },
+  {
+    "item": "create:brass_ingot_sword",
+    "weight": 2
+  },
+  {
+    "item": "diamond_shovel",
+    "weight": 2
+  }
+]

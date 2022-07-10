@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RHR",
+    "RRR"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "H": {
+      "item": "minecraft:player_head"
+    }
+  },
+  "result": {
+    "item": "minecraft:zombie_head"
+  }
+}
