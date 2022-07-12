@@ -188,13 +188,13 @@ onEvent("recipes", (event) => {
     //
     // Add Create mod's variant of crushing things
     for (let material in crushingRecipes) {
-        if (!withMekanism || (!material.includes("mekanism") && !crushingRecipes[material].includes("mekanism"))) {
+        // if (!withMekanism || (!material.includes("mekanism") && !crushingRecipes[material].includes("mekanism"))) {
             event.recipes.create.crushing({
                 ingredients: [{ item: material }],
                 results: [{ item: crushingRecipes[material], count: 1 }],
                 processingTime: 100,
             });
-        }
+        // }
     }
 
     // No crafting table from the beginning

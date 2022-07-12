@@ -33,6 +33,12 @@ onEvent('item.modification', event => {
 		item.maxStackSize = stackSizes[k];
 	  });
 	}
+
+	event.modify('minecraft:iron_sword',item => {
+		item.maxDamage = 333; // Изменение максимальной прочности предмета.
+		item.attackDamage = 444;
+		item.setAttackDamage(555);
+	});
 })
 
 // onEvent('worldgen.add', event => {

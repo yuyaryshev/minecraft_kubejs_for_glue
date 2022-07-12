@@ -20,7 +20,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../b/Mine/GIT_Work/minecraft_create_balancing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="G:\G\minecraft\kubejs\node_modules\prettier" />
   </component>
@@ -33,9 +33,10 @@
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1656666428084" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1657474516477" />
-    <state x="666" y="122" width="587" height="795" key="find.popup" timestamp="1654891136500">
+    <state x="666" y="122" width="587" height="795" key="find.popup" timestamp="1657637209974">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="666" y="122" width="587" height="795" key="find.popup/0.0.1920.1040/-1920.0.1920.1080/1920.0.1920.1080@0.0.1920.1040" timestamp="1657637209974" />
     <state x="666" y="122" width="587" height="795" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1654891136500" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1656586135737">
       <screen x="1920" y="0" width="1920" height="1040" />
